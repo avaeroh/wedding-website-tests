@@ -1,4 +1,4 @@
-package starter.search;
+package pageSegments;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -11,19 +11,19 @@ public class HamburgerMenu {
             .locatedBy("#menuToggle");
 
     static Target GETTING_HERE = Target.the("getting here")
-            .locatedBy("#gettingHere");
+            .locatedBy("li a[href='#gettingHere'");
 
     static Target RSVP = Target.the("rsvp")
-            .locatedBy("#rsvp");
+            .locatedBy(".menuLinks #rsvp");
 
     static Target BRIDESMAIDS = Target.the("bridesmaids")
-            .locatedBy("#bridesmaids");
+            .locatedBy("li a[href='#bridesmaids'");
 
     static Target GROOMSMEN = Target.the("groomsmen")
-            .locatedBy("#groomsmen.container");
+            .locatedBy("li a[href='#groomsmen'");
 
     static Target OUR_STORY = Target.the("our story")
-            .locatedBy("#our-story");
+            .locatedBy("li a[href='#our-story'");
 
     public static Performable opens() {
         return Task.where("{0} opens the hamburger menu",
