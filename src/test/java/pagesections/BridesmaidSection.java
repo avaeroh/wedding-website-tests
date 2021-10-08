@@ -1,15 +1,15 @@
-package pageSegments;
+package pagesections;
 
 import net.serenitybdd.screenplay.targets.Target;
 
-public class GroomsmenSection {
+public class BridesmaidSection {
 
-    public static final Target CALLUM = Target.the("callum").locatedBy("img[src*='callum.jpg']");
+    public static final Target FAYE = Target.the("faye").locatedBy("img[src*='faye.jpg']");
 
-    public static Target getGroomsman(String string) {
+    public static Target getBridesmaids(String string) {
         Target target;
         switch (string) {
-            case "callum": target = CALLUM;
+            case "faye": target = FAYE;
                 break;
             default: throw new UnsupportedOperationException("this option is not listed in the navigation items");
         }

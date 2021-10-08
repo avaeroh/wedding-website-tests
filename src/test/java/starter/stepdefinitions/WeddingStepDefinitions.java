@@ -1,17 +1,23 @@
 package starter.stepdefinitions;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import pageSegments.BridesmaidSection;
-import pageSegments.GroomsmenSection;
-import pageSegments.HamburgerMenu;
+import pagesections.BridesmaidSection;
+import pagesections.GroomsmenSection;
+import pagesections.HamburgerMenu;
+import starter.pages.WeddingHomePage;
 
 import java.time.Duration;
 
 public class WeddingStepDefinitions {
 
+    @Given("{actor} navigates to the wedding website")
+    public void navigatesToWeddingWebsite(Actor actor) {
+        actor.wasAbleTo(WeddingHomePage.theWeddingHomePage());
+    }
 
     @When("{actor} opens the hamburger menu")
     public void opensTheHamburger(Actor actor) {
