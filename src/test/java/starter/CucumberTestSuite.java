@@ -5,7 +5,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(
+@CucumberOptions(tags = "@wedding",
         plugin = {"pretty"},
         features = "src/test/resources/features"
 )
